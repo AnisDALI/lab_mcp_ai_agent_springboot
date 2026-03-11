@@ -67,3 +67,8 @@ out/
 
 ### VS Code ###
 .vscode/
+
+
+.metals/
+.bloop/
+.worksheet/
