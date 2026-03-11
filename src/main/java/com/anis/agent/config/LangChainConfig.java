@@ -22,6 +22,9 @@ public class LangChainConfig {
             @Value("${anthropic.model}") String model,
             @Value("${anthropic.timeout-seconds}") Integer timeoutSeconds
     ) {
+        System.out.println("Anthropic key loaded: " +
+                (apiKey == null ? "null" : apiKey.substring(0, Math.min(10, apiKey.length())) + "..."));
+
         return AnthropicChatModel.builder()
                 .apiKey(apiKey)
                 .modelName(model)
